@@ -11,3 +11,14 @@ test("Adds 2 + 2 to NOT equal 5", () => {
 test("should be null", () => {
   expect(functions.isNull()).toBeNull();
 });
+
+test("should be falsy", () => {
+  expect(functions.checkValue(null)).toBeFalsy();
+});
+
+test("User should be Karen Heyn object", () => {
+  expect(functions.createUser()).toStrictEqual({
+    firstName: "Karen",
+    lastName: "Heyn",
+  });
+});
